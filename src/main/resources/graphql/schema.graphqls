@@ -1,0 +1,35 @@
+type Query {
+  getBasketballPlayers(pagination:Pagination): [BasketballPlayer]
+}
+
+type Mutation {
+  createBasketballPlayer(input: CreateBasketballPlayerInput!): BasketballPlayer!
+  deleteBasketballPlayer(id:ID ): Boolean
+}
+
+input CreateBasketballPlayerInput {
+  name: String!
+  surname: String!
+  position: Position!
+}
+
+input Pagination {
+  size: Int! = 10
+  page: Int! = 0
+}
+
+type BasketballPlayer {
+  id: ID!
+  name: String!
+  surname: String!
+  position: Position!
+}
+
+enum Position {
+  PG
+  SG
+  SF
+  PF
+  C
+}
+

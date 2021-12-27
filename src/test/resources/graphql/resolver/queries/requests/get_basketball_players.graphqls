@@ -1,0 +1,11 @@
+{
+    getBasketballPlayers (pagination: {
+        size: 10
+        page: 0
+    }) {
+        id
+        name
+        surname
+        position
+    }
+}

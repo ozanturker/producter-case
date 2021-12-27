@@ -1,0 +1,11 @@
+mutation {
+    createBasketballPlayer (input: {
+        name: "test_name",
+        position: C,
+        surname: "test_surname"}) {
+        id
+        name
+        surname
+        position
+    }
+}
